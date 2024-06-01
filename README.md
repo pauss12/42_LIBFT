@@ -1,8 +1,9 @@
-PRIMER PROYECTO DEL CURSO FUNDACION TELEFONICA - 42 MADRID (LIBRERIA LIBFT)
+FIRST PROJECT - 42 MADRID (LIBFT)
 
-FUNCIONAMIENTO DE CADA UNA DE LAS FUNCIONES:
+The goal of this project is to program a C library regrouping usual functions that you'll be allowed to use in all your future projects.
+
 ```
-  - ft_atoi() =>
+  - ft_atoi() => Its main goal is to be able to transforme a string, passed through arguments, to integer. 
   - ft_bzero() =>
   - ft_calloc() =>
   - ft_isalnum() =>
