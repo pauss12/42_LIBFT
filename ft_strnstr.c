@@ -6,12 +6,23 @@
 /*   By: pmendez- <pmendez-@student42.madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 10:40:16 by pmendez-          #+#    #+#             */
-/*   Updated: 2023/09/23 18:28:06 by pmendez-         ###   ########.fr       */
+/*   Updated: 2024/02/03 18:01:37 by pmendez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
+/**
+ * Busca una subcadena en una cadena limitada por un tamaño.
+ * Busca la primera aparición de la subcadena `needle` en la cadena `haystack`,
+ * pero solo dentro de los primeros `len` caracteres de `haystack`.
+ *
+ * @param haystack: Cadena en la que se realiza la búsqueda.
+ * @param needle: Subcadena que se busca en `haystack`.
+ * @param len: Número máximo de caracteres de `haystack` a examinar.
+ * @return Un puntero al comienzo de la primera aparición de `needle` en `haystack`,
+ * o NULL si `needle` no se encuentra en los primeros `len` caracteres.
+ */
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	cont1;
@@ -37,22 +48,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-/*
-int main()
-{
-    char haystack[] = "Hola, mundo!";
-    char needle[] = "mundo";
-    char *ptr;
-
-    ptr = ft_strnstr(haystack, needle, 12);
-    if (ptr != NULL)
-    {
-        printf("La subcadena 'mundo' se encuentra en la posición %p\n", ptr);
-    }
-    else
-    {
-        printf("La subcadena 'mundo' no se encuentra en la cadena\n");
-    }
-    return 0;
-}
-*/

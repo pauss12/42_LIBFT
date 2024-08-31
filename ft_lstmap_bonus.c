@@ -6,13 +6,24 @@
 /*   By: pmendez- <pmendez-@student42.madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:52:11 by pmendez-          #+#    #+#             */
-/*   Updated: 2023/09/29 19:32:23 by pmendez-         ###   ########.fr       */
+/*   Updated: 2024/02/03 17:57:55 by pmendez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
+#include "../libft.h"
 
+/**
+ * Crea una nueva lista a partir de una lista existente, aplicando una función a cada elemento.
+ * Itera sobre la lista `lst`, aplica la función `f` a cada elemento para crear un nuevo contenido,
+ * y crea una nueva lista con estos elementos. Si se produce un error en la creación de un nuevo
+ * elemento, limpia la lista creada y llama a la función `del` en el contenido de los elementos
+ * fallidos.
+ *
+ * @param lst: Lista de entrada cuyos elementos serán mapeados.
+ * @param f: Función que toma un puntero al contenido de un elemento y devuelve un nuevo contenido.
+ * @param del: Función para liberar la memoria del contenido de los elementos en caso de error.
+ * @return Un puntero a la nueva lista con los elementos transformados. Retorna NULL si ocurre un error.
+ */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;

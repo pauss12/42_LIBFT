@@ -6,13 +6,23 @@
 /*   By: pmendez- <pmendez-@student42.madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 18:32:17 by pmendez-          #+#    #+#             */
-/*   Updated: 2023/09/28 18:20:35 by pmendez-         ###   ########.fr       */
+/*   Updated: 2024/02/03 17:58:18 by pmendez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
+#include "../libft.h"
 
+/**
+ * Calcula el tamaño de una lista enlazada, es decir, el número de nodos
+ * en la lista.
+ * Pasa al siguiente nodo y aumenta el contador en 1 mientras la lista
+ * no esté vacía.
+ * Cuando la lista esté vacía, retorna el contador, que es el tamaño de
+ * la lista.
+ *
+ * @param lst: Puntero al primer nodo de la lista.
+ * @return: El tamaño de la lista.
+ */
 int	ft_lstsize(t_list *lst)
 {
 	int	tam;
@@ -25,16 +35,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (tam);
 }
-/*
-int main()
-{
-    t_list *list;
-
-    list = (void *)0;
-
-    ft_lstadd_front(&list, ft_lstnew("Hola"));
-    ft_lstadd_front(&list, ft_lstnew("Mundo"));
-    ft_lstadd_front(&list, ft_lstnew("Hola"));
-    printf("El tamaño de la lista es: %d\n", ft_lstsize(list));
-}
-*/

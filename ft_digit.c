@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmendez- <pmendez-@student42.madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 18:16:45 by pmendez-          #+#    #+#             */
-/*   Updated: 2023/09/12 16:52:38 by pmendez-         ###   ########.fr       */
+/*   Created: 2023/09/11 20:23:35 by pmendez-          #+#    #+#             */
+/*   Updated: 2024/03/02 18:44:17 by pmendez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
 /**
- * Verifica si un carácter dado es alfanumérico.
- * Si el carácter es una letra (mayúscula o minúscula) o un número, retorna 1.
- * Si el carácter no es una letra ni un número, retorna 0.
+ * Verifica si un carácter dado es un dígito.
+ * Si el carácter es un número del 0 al 9, retorna 1.
+ * Si el carácter no es un número, retorna 0.
  *
  * @param c: El carácter a verificar.
- * @return: 1 si el carácter es alfanumérico, 0 en caso contrario.
+ * @return: 1 si el carácter es un dígito, 0 en caso contrario.
  */
-int	ft_isalnum(int c)
+bool	ft_digit(int c)
 {
-	if ((c >= 'a' && c <= 'z')
-		|| (c >= 'A' && c <= 'Z')
-		|| (c >= '0' && c <= '9'))
-		return (1);
-	return (0);
+	if (c >= '0' && c <= '9')
+		return (true);
+	return (false);
 }

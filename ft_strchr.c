@@ -6,13 +6,24 @@
 /*   By: pmendez- <pmendez-@student42.madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 19:03:30 by pmendez-          #+#    #+#             */
-/*   Updated: 2023/09/16 20:11:27 by pmendez-         ###   ########.fr       */
+/*   Updated: 2024/02/03 18:00:24 by pmendez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-char	*ft_strchr(const char *s, int c)
+/**
+ * Busca la primera aparición de un carácter en una cadena.
+ * Recorre la cadena `s` buscando la primera aparición del carácter `c`.
+ * Si encuentra el carácter, devuelve un puntero a la posición en la cadena.
+ * Si el carácter `c` es el carácter nulo ('\0'), devuelve un puntero al final de la cadena.
+ *
+ * @param s: Cadena en la que se busca el carácter.
+ * @param c: Carácter a buscar en la cadena.
+ * @return Un puntero a la primera aparición del carácter `c` en la cadena `s`.
+ * Retorna NULL si el carácter no se encuentra.
+ */
+char	*ft_strchr(char *s, int c)
 {
 	int	cont;
 
@@ -27,24 +38,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s + cont);
 	return (NULL);
 }
-/*
-int main()
-{
-    char str[] = "This is a string";
-    char *ptr;
-
-    ptr = ft_strchr(str, '_');
-    if (ptr != NULL)
-    {
-        printf("The first occurrence of 's' is at 
-	index %ld\n", (ptr - str) + 1);
-        printf("La frase que queda es [%s]\n", ptr);
-    }
-    else
-    {
-        printf("The character 's' was not found in the string\n");
-    }
-
-    return (0);
-}
-*/

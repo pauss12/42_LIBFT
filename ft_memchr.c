@@ -6,12 +6,25 @@
 /*   By: pmendez- <pmendez-@student42.madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 10:51:25 by pmendez-          #+#    #+#             */
-/*   Updated: 2023/09/13 10:54:18 by pmendez-         ###   ########.fr       */
+/*   Updated: 2024/02/03 17:55:36 by pmendez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
+/**
+ * Busca un carácter específico en una cadena de caracteres.
+ * Compara el carácter en la posición del contador con el carácter buscado.
+ * Si son iguales, retorna un puntero al carácter.
+ * Si el carácter buscado no se encuentra en la cadena de caracteres dentro
+ * del tamaño especificado, retorna nulo.
+ *
+ * @param str: Cadena de caracteres en la que buscar.
+ * @param c: Carácter a buscar.
+ * @param n: Número máximo de bytes a considerar en la cadena de caracteres.
+ * @return: Un puntero al primer carácter encontrado en la cadena de
+ * caracteres, o nulo si el carácter no se encuentra.
+ */
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*ptr;
@@ -27,24 +40,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/*
-int main()
-{
-    char str[] = "Hola, mundo!";
-    char *ptr;
-
-    ptr = ft_memchr(str, 'o', 6);
-
-    if (ptr != NULL)
-    {
-        printf("El carácter 'o' se encuentra en la posición %p\n", ptr);
-    }
-    else
-    {
-        printf("El carácter 'o' no se encuentra en la cadena\n");
-    }
-
-    return 0;
-}
-*/

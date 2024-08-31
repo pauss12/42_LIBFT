@@ -6,14 +6,22 @@
 /*   By: pmendez- <pmendez-@student42.madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 18:12:58 by pmendez-          #+#    #+#             */
-/*   Updated: 2023/09/16 20:08:11 by pmendez-         ###   ########.fr       */
+/*   Updated: 2024/02/03 18:00:45 by pmendez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "../libft.h"
 
+/**
+ * Une dos cadenas en una nueva cadena.
+ * Reserva memoria y concatena las cadenas `s1` y `s2`, creando una nueva cadena
+ * que contiene `s1` seguido de `s2`.
+ *
+ * @param s1: Primera cadena.
+ * @param s2: Segunda cadena.
+ * @return Un puntero a la nueva cadena resultante de la concatenación de `s1` y `s2`.
+ * Retorna NULL si la reserva de memoria falla.
+ */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
@@ -42,19 +50,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i + j] = '\0';
 	return (str);
 }
-/*
-int main() {
-  const char str1[] = "This is a string";
-  const char str2[] = " with whitespace.";
-  char *joined_str;
-
-  joined_str = ft_strjoin(str1, str2);
-
-  if (joined_str == NULL) {
-    printf("The ft_strjoin() function failed.\n");
-    return (1);
-  }
-  printf("The joined string is: %s\n", joined_str);
-  return 0;
-}
-*/
